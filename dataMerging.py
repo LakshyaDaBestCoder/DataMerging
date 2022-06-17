@@ -30,7 +30,7 @@ for data in starData1:
     if data[2]=="" or data[3]=="" or data[4]=="" or data[5]=="":
         starData1.remove(data)
 
-with open("final.csv", "a+") as f:
+with open("final.csv", "w", newline='') as f:
     csvWriter = csv.writer(f)
     csvWriter.writerow(headers)
     csvWriter.writerows(starData1)
